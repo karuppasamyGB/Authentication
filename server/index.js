@@ -5,7 +5,11 @@ const EmployeeModel = require("./models/Employee")
 
 const app = express()  
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+origin: [https://authentication-eight-coral.vercel.app/],
+methods: ["POST"],
+credentials:true
+}));
 
 mongoose.connect("mongodb+srv://itsmekaruppasamy:a1B4571sCNE66Tmn@cluster0.nlhmndk.mongodb.net/")
 

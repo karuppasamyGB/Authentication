@@ -13,7 +13,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('https://authentication-eight-coral.vercel.app/Login', { name, email, password })
+        axios.post('https://authentication-eight-coral.vercel.app/', { name, email, password })
             .then(result => {
                 console.log(result)
                 if (result.data === "Success") {
